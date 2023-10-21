@@ -1,0 +1,22 @@
+---
+
+dependency:
+  name: galaxy
+  enabled: false
+
+driver:
+  name: docker
+
+platforms:
+  - name: centos
+    image: centos:7
+    entrypoint: /sbin/init
+    privileged: true
+
+provisioner:
+  name: ansible
+  env:
+    ANSIBLE_STDOUT_CALLBACK: yaml
+
+verifier:
+  name: testinfra

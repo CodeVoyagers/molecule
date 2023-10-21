@@ -1,0 +1,26 @@
+---
+
+- name: Install RedHat repository
+  ansible.builtin.package:
+    name: http://download.postgresql.org/pub/repos/yum/reporpms/EL-7-aarch64/pgdg-redhat-repo-latest.noarch.rpm
+    state: present
+
+- name: Install PostgreSQL server
+  ansible.builtin.package:
+    name: postgresql13-server
+    state: present
+
+- name: Get the information of the postgresql files
+  ansible.builtin.stat:
+    path: /var/lib/pgsql/13/data/PG_VERSION
+  register: postgres_pgsql_data_result
+- name: Initialize the database
+  ansible.builtin.command: /usr/pgsql-13/bin/postgresql-13-setup initdb
+  when: not postgres_pgsql_data_result.stat.exists
+  changed_when: true
+
+- name: Start PostgreSQL server
+  ansible.builtin.systemd_service:
+    enabled: true
+    name: postgresql-13
+    state: started
