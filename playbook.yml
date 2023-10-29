@@ -1,6 +1,6 @@
 ---
 
-- name: Create PostgreSQL server
+- name: Print Hello World!
   hosts: localhost
   gather_facts: false
   tasks:
