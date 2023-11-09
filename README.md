@@ -1,12 +1,10 @@
 ## Ansible Molecule
 
-[技術書典15](https://techbookfest.org/event/tbf15)で頒布した書籍[Ansible Molecule]()のサンプルコードリポジトリです。本書では、AnsibleのRoleのテストを実施するためのフレームワークであるAnsible Moleculeに焦点を当てたものとなります。
+[技術書典15](https://techbookfest.org/event/tbf15)で頒布した書籍[Ansible Molecule](https://techbookfest.org/product/iJB9E9baYiap79x2fy5MCG)のサンプルコードリポジトリです。本書では、AnsibleのRoleのテストを実施するためのフレームワークであるAnsible Moleculeに焦点を当てたものとなります。
 
 **購入はこちらから**
 
-- [技術書典オンラインマーケット]()
-- [BOOTH]()
-
+- [技術書典オンラインマーケット](https://techbookfest.org/product/iJB9E9baYiap79x2fy5MCG)
 
 <img src="images/front_cover.jpg" alt="表紙" width=300>
 
